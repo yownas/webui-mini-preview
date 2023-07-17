@@ -14,7 +14,7 @@ Flash `Arduino/preview.ino` to a M5Stack Core. Make sure to change some settings
 ```
 #define MY_SSID "WiFi SSID"
 #define MY_PASS "WiFi password"
-#define PREVIEWURL "http://192.168.1.10:7868/minip/run"
+#define PREVIEWURL "http://192.168.1.10:7860/minip/run"
 ```
 
 Install this repo as an extension. This will set up an api entrypoint `/minip/run` that will return a shrunk down 320x240 jpeg of the preview image. This is done to get a response small enough to be easy for the ESP32 to handle.
