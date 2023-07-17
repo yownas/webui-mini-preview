@@ -8,8 +8,7 @@
 
 #define MY_SSID "WiFi SSID"
 #define MY_PASS "WiFi password"
-#define PREVIEWURL "http://192.168.1.10:7868/minip/run"
-
+#define PREVIEWURL "http://192.168.1.10:7860/minip/run"
 
 WiFiMulti wifiMulti;
 
@@ -64,12 +63,10 @@ void loop() {
 
         if (progress > 0) {
             M5.Lcd.progressBar(0, 0, 320, 8, progress);
-            //M5.Lcd.setCursor(0, 5);
             M5.Lcd.drawJpg(bitmap, 32768, 0, 8);
             sleep = 500;
         } else {
             M5.Lcd.clear();
-            //M5.Lcd.printf("Done...");
             sleep = 2000;
         }
     } else {
@@ -77,5 +74,4 @@ void loop() {
         sleep = 10000;
     }
     delay(sleep);
-    //M5.Lcd.clear();  // clear the screen.
 }
